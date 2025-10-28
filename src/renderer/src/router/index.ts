@@ -7,8 +7,8 @@ const router = createHashRouter([
     path: '/',
     Component: Root,
     children: [
-      { index: true, Component: lazy(() => import('../pages/home')) },
-      { path: '/teacher', Component: lazy(() => import('../pages/teacher')) },
+      { index: true, Component: lazy(() => import('@renderer/pages/home')) },
+      { path: '/teacher', Component: lazy(() => import('@renderer/pages/teacher')) },
       // { path: '/unpack-app', Component: lazy(() => import('@renderer/pages/unpack-app')) },
       // { path: '/edit-app', Component: lazy(() => import('@renderer/pages/edit-app')) },
       // { path: '/sign-app', Component: lazy(() => import('@renderer/pages/sign-app')) },
