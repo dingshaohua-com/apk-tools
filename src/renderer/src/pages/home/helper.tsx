@@ -9,7 +9,7 @@ export const getMenuItems = (navigate) => {
     {
       icon: <img className="w-7 h-7" src={unpackAppImg} />,
       title: '解包',
-      description: '解析 APK 文件结构',
+      description: '反编译 APK 文件',
       variant: 'primary' as const,
       onClick: () => {
         navigate('/unpack-app');

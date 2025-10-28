@@ -26,3 +26,6 @@ export interface MenuItemProps {
     | 'dark'
     | 'light'
 }
+
+
+export type CommonState = { type: 'idle' } | { type: 'loading' } | { type: 'success'; data: string } | { type: 'error'; message: string };

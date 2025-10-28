@@ -51,6 +51,7 @@ app.whenReady().then(() => {
 
   // IPC test
   ipcMain.on('ping', () => console.log('pong'))
+  import('./icp-handlers')
 
   createWindow()
 

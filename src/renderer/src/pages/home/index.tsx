@@ -36,12 +36,6 @@ export default function Home(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 p-8">
       <div className="max-w-6xl mx-auto">
-        {/* 头部标题 */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">APK 编辑器</h1>
-          <p className="text-lg text-gray-600">专业的 Android 应用包编辑工具</p>
-        </div>
-
         {/* 功能菜单 */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {getMenuItems(navigate).map((item, index) => (
