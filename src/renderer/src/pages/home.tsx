@@ -1,4 +1,4 @@
 const Home = () => {
-  return <div>home</div>
-}
-export default Home
+  return <div className="text-red-200">home</div>;
+};
+export default Home;
