@@ -17,7 +17,7 @@ export default function Success(props: SuccessProps) {
             <CheckCircle className="w-6 h-6 text-green-600" />
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-green-800 flex items-center gap-2">{props.title}</h3>
+            <h3 className="text-lg font-semibold text-green-800 flex items-center gap-2 ">{props.title}</h3>
             {typeof props.description === 'string' ? <p className="text-green-700 text-sm">{props.description}</p> : props.description}
           </div>
         </div>
@@ -25,7 +25,7 @@ export default function Success(props: SuccessProps) {
         {props.actions && props.onRedo && (
           <div className="flex gap-3 flex-wrap mt-10">
             {props.onRedo && (
-              <Button onClick={props.onRedo} size="sm" className="cursor-pointer bg-red-600 hover:bg-red-700 text-white flex items-center gap-2">
+              <Button onClick={props.onRedo} theme="red">
                 <RotateCcw className="w-4 h-4" />
                 重新开始
               </Button>

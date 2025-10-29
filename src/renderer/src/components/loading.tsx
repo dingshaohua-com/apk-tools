@@ -1,6 +1,7 @@
 import loadingImg from '@renderer/assets/imgs/loading.gif';
+import React from 'react';
 
-export default function Loading(props: { title: string; description: string }) {
+export default function Loading(props: { title: string; description: React.ReactNode }) {
   return (
     <div className="flex flex-col items-center">
       <img src={loadingImg} alt="Loading" className="w-32 h-32 object-contain" />

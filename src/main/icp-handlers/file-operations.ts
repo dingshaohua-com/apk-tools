@@ -1,7 +1,7 @@
 import { shell, ipcMain, dialog, OpenDialogOptions } from 'electron';
 
 // 选择文件
-ipcMain.handle('select-file', async () => {
+ipcMain.handle('selectFile', async () => {
   const opt: OpenDialogOptions = {
     properties: ['openFile'],
     filters: [{ name: 'All Files', extensions: ['apk'] }],
@@ -16,7 +16,7 @@ ipcMain.handle('select-file', async () => {
 });
 
 // 选择目录
-ipcMain.handle('select-dir', async () => {
+ipcMain.handle('selectDir', async () => {
   const opt: OpenDialogOptions = {
     properties: ['openDirectory'],
     title: '选择应用目录',
@@ -29,8 +29,8 @@ ipcMain.handle('select-dir', async () => {
   }
 });
 
-// 打开目录
-ipcMain.handle('open-folder', async (_, folderPath: string) => {
+// 打开文件夹
+ipcMain.handle('openFolder', async (_, folderPath: string) => {
   try {
     await shell.openPath(folderPath);
     return true;

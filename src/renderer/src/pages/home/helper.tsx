@@ -15,24 +15,24 @@ export const getMenuItems = (navigate) => {
         navigate('/decode-apk');
       },
     },
-    {
-      icon: <img className="w-8 h-8" src={patchAppImg} />,
-      title: '修补',
-      description: '针对打包失败或优化',
-      variant: 'secondary' as const,
-      onClick: () => {
-        navigate('/patch-app');
-      },
-    },
-    {
-      icon: <img className="w-7 h-7" src={editAppImg} />,
-      title: '编辑包',
-      description: '修改APP信息',
-      variant: 'danger' as const,
-      onClick: () => {
-        navigate('/edit-app');
-      },
-    },
+    // {
+    //   icon: <img className="w-8 h-8" src={patchAppImg} />,
+    //   title: '修补',
+    //   description: '针对打包失败或优化',
+    //   variant: 'secondary' as const,
+    //   onClick: () => {
+    //     navigate('/patch-app');
+    //   },
+    // },
+    // {
+    //   icon: <img className="w-7 h-7" src={editAppImg} />,
+    //   title: '编辑包',
+    //   description: '修改APP信息',
+    //   variant: 'danger' as const,
+    //   onClick: () => {
+    //     navigate('/edit-app');
+    //   },
+    // },
     {
       icon: <img className="w-7 h-7" src={packAppImg} />,
       title: '重打包',
