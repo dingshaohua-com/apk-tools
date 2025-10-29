@@ -57,7 +57,7 @@ export default function Unpack(): React.JSX.Element {
                   onRedo={() => setState({ type: 'idle' })}
                   actions={
                     <Button onClick={openUnpackFolder} size="sm" className="cursor-pointer bg-yellow-600 hover:bg-yellow-700 text-white flex items-center gap-2">
-                      <Folder className="w-4 h-4" />
+                      <Folder className="w-4 h-4" /> 打开目录
                     </Button>
                   }
                 />

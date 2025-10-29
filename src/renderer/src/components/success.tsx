@@ -30,7 +30,7 @@ export default function Success(props: SuccessProps) {
                 重新开始
               </Button>
             )}
-            {props.actions}
+            {props.actions && props.actions}
           </div>
         )}
       </div>
