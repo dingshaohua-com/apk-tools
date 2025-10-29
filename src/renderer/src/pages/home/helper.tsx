@@ -12,7 +12,7 @@ export const getMenuItems = (navigate) => {
       description: '反编译 APK 文件',
       variant: 'primary' as const,
       onClick: () => {
-        navigate('/unpack-app');
+        navigate('/decode-apk');
       },
     },
     {
@@ -39,7 +39,7 @@ export const getMenuItems = (navigate) => {
       description: '重新生成 APK 文件',
       variant: 'info' as const,
       onClick: () => {
-        navigate('/pack-app');
+        navigate('/build-apk');
       },
     },
     {
@@ -50,27 +50,7 @@ export const getMenuItems = (navigate) => {
       onClick: () => {
         navigate('/sign-app');
       },
-    },
-
-    // {
-    //   icon: <FileText className="w-6 h-6" />,
-    //   title: '资源管理',
-    //   description: '管理应用资源文件',
-    //   onClick: () => console.log('资源管理'),
-    // },
-
-    // {
-    //   icon: <Database className="w-6 h-6" />,
-    //   title: '数据库工具',
-    //   description: '管理应用数据库',
-    //   onClick: () => console.log('数据库工具'),
-    // },
-    // {
-    //   icon: <Globe className="w-6 h-6" />,
-    //   title: '网络调试',
-    //   description: '网络请求分析',
-    //   onClick: () => console.log('网络调试'),
-    // },
+    }
   ];
 };
 

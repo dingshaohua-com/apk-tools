@@ -1,7 +1,12 @@
 import { ipcMain } from 'electron';
-import { decodeApk } from '@main/utils/run-tools/run-apktool';
+import { decodeApk, buildApk } from '@main/utils/run-tools/run-apktool';
 
-// 解包APK
-ipcMain.handle('unpack-apk', async (_, filePath: string) => {
+// 反编译APK
+ipcMain.handle('decodeApk', async (_, filePath: string) => {
   return decodeApk({ filePath });
+});
+
+// 打包APK
+ipcMain.handle('buildApk', async (_, filePath: string, useAapt1: boolean=false) => {
+  return buildApk({ filePath, useAapt1 });
 });

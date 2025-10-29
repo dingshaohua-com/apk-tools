@@ -9,14 +9,14 @@ import Loading from '@renderer/components/loading';
 import Success from '@renderer/components/success';
 import { Button } from '@renderer/components/ui/button';
 
-export default function Unpack(): React.JSX.Element {
+export default function DecodeApk(): React.JSX.Element {
   const [state, setState] = useState<CommonState>({ type: 'idle' });
 
   const onSelectFile = async () => {
     try {
       const filePath = await electron.ipcRenderer.invoke('select-file');
       setState({ type: 'loading' });
-      const res = await electron.ipcRenderer.invoke('unpack-apk', filePath);
+      const res = await electron.ipcRenderer.invoke('decodeApk', filePath);
       // 显示成功状态和烟花效果
       setState({ type: 'success', data: res });
     } catch (err) {
@@ -33,7 +33,7 @@ export default function Unpack(): React.JSX.Element {
 
   return (
     <>
-      <div className="h-screen ">
+      <div className="h-screen">
         <Header title="APK 解包" />
         <div className="flex items-center justify-center min-h-[calc(100vh-80px)] p-8">
           <div className="w-full max-w-2xl">

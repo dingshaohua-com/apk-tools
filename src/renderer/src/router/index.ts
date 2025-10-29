@@ -8,8 +8,8 @@ const router = createHashRouter([
     Component: Root,
     children: [
       { index: true, Component: lazy(() => import('@renderer/pages/home')) },
-      { path: '/unpack-app', Component: lazy(() => import('@renderer/pages/unpack-app')) },
-      // { path: '/unpack-app', Component: lazy(() => import('@renderer/pages/unpack-app')) },
+      { path: '/decode-apk', Component: lazy(() => import('@renderer/pages/decode-apk')) },
+      { path: '/build-apk', Component: lazy(() => import('@renderer/pages/build-apk')) },
       // { path: '/edit-app', Component: lazy(() => import('@renderer/pages/edit-app')) },
       // { path: '/sign-app', Component: lazy(() => import('@renderer/pages/sign-app')) },
     ],
