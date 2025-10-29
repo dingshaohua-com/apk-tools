@@ -52,7 +52,7 @@ export default function BuildApk() {
                 <Tips tips={['请选择已解包的 APK 目录', '打包需要一些时间，请耐心等待']} />
               </>
             ))
-            .with({ type: 'success' }, ({ directoryPath }) => (
+            .with({ type: 'success' }, ({ data: directoryPath }) => (
               <div className="bg-white rounded-2xl shadow-xl p-8">
                 {/* 目录信息 */}
                 <div className="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
@@ -74,23 +74,23 @@ export default function BuildApk() {
               </div>
             ))
             .with({ type: 'loading' }, () => <Loading title="正在打包中..." description="请稍候，正在重新打包 APK，一般需要30秒左右！" />)
-            .with({ type: 'success' }, ({ outputPath }) => (
-              <Success
-                title=" 🎉  打包成功！"
-                description={
-                  <div className="mb-4 p-3 bg-green-100 rounded-lg">
-                    <p className="text-sm text-green-900 font-medium mb-1">输出路径：</p>
-                    <p className="text-sm text-green-800 font-mono break-all">{outputPath}</p>
-                  </div>
-                }
-                onRedo={() => setState({ type: 'idle' })}
-                actions={
-                  <Button onClick={openOutputFolder} size="sm" className="cursor-pointer bg-yellow-600 hover:bg-yellow-700 text-white flex items-center gap-2">
-                    <Folder className="w-4 h-4" /> 打开输出目录
-                  </Button>
-                }
-              />
-            ))
+            //  .with({ type: 'success' }, ({ outputPath }) => (
+            //                <Success
+            //                  title=" 🎉  打包成功！"
+            //                  description={
+            //                    <div className="mb-4 p-3 bg-green-100 rounded-lg">
+            //                      <p className="text-sm text-green-900 font-medium mb-1">输出路径：</p>
+            //                      <p className="text-sm text-green-800 font-mono break-all">{outputPath}</p>
+            //                    </div>
+            //                  }
+            //                  onRedo={() => setState({ type: 'idle' })}
+            //                  actions={
+            //                    <Button onClick={openOutputFolder} size="sm" className="cursor-pointer bg-yellow-600 hover:bg-yellow-700 text-white flex items-center gap-2">
+            //                      <Folder className="w-4 h-4" /> 打开输出目录
+            //                    </Button>
+            //                  }
+            //                />
+            //              ))
             .with({ type: 'error' }, ({ message }) => <Fail message={message} onRedo={handleReset} />)
             .otherwise(() => null)}
         </div>
