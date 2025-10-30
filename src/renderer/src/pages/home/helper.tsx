@@ -1,7 +1,7 @@
-import editAppImg from '@renderer/assets/imgs/edit-app.svg';
+// import editAppImg from '@renderer/assets/imgs/edit-app.svg';
 import packAppImg from '@renderer/assets/imgs/pack-app.svg';
 import signAppImg from '@renderer/assets/imgs/sign-app.svg';
-import patchAppImg from '@renderer/assets/imgs/patch-app.svg';
+// import patchAppImg from '@renderer/assets/imgs/patch-app.svg';
 import unpackAppImg from '@renderer/assets/imgs/unpack-app.svg';
 
 export const getMenuItems = (navigate) => {

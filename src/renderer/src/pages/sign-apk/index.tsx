@@ -14,7 +14,7 @@ type SignState = CommonState | { type: 'file-selected'; data: string };
 
 const certTypeOptions = [
   { label: '梧桐系', value: 'tinnove' },
-  { label: '飞鱼系', value: 'feiyu' },
+  { label: '飞鱼系', value: 'iFlyAuto' },
   { label: 'G318', value: 'g318' },
   { label: 'A07', value: 'a07' },
 ];
