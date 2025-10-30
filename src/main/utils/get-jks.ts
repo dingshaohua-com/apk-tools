@@ -1,4 +1,7 @@
-import tinnoveCertJks from '@root/resources/jks/one-cert.jks?asset';
+import deepalCertJks from '@root/resources/jks/deepal-cert.jks?asset';
+import qiyuanCertJks from '@root/resources/jks/qiyuan-cert.jks?asset';
+import tinnoveCertJks from '@root/resources/jks/tinnove-cert.jks?asset';
+import iFlyAutoCertJks from '@root/resources/jks/iFlyAuto-cert.jks?asset';
 
 interface CertJks {
   value: string;
@@ -9,8 +12,23 @@ interface CertJks {
 const certJksList: CertJks[] = [
   {
     value: 'tinnove',
-    label: '梧桐系',
+    label: '梧桐 OS',
     path: tinnoveCertJks,
+  },
+  {
+    value: 'iFlyAuto',
+    label: '飞鱼 OS',
+    path: iFlyAutoCertJks,
+  },
+  {
+    value: 'deepal',
+    label: 'Deepal OS',
+    path: deepalCertJks,
+  },
+  {
+    value: 'qiyuan',
+    label: '启源 OS',
+    path: qiyuanCertJks,
   },
 ];
 

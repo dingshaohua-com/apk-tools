@@ -6,17 +6,17 @@ import { CommonState } from '@renderer/types';
 import Header from '@renderer/components/header';
 import Loading from '@renderer/components/loading';
 import Success from '@renderer/components/success';
+import { getDirFromPath } from '@renderer/lib/common';
 import { Button } from '@renderer/components/ui/button';
 import { FileCheck, RotateCcw, Folder } from 'lucide-react';
-import { getDirFromPath } from '@renderer/lib/common';
 
 type SignState = CommonState | { type: 'file-selected'; data: string };
 
 const certTypeOptions = [
-  { label: '梧桐系', value: 'tinnove' },
-  { label: '飞鱼系', value: 'iFlyAuto' },
-  { label: 'G318', value: 'g318' },
-  { label: 'A07', value: 'a07' },
+  { label: '梧桐 OS', value: 'tinnove', describe: 'CS75等车型' },
+  { label: '飞鱼 OS', value: 'iFlyAuto', describe: '长安UNI-V等车型' },
+  { label: 'Deepal OS', value: 'deepal', describe: '深蓝G318等车型' },
+  { label: '启源 OS', value: 'qiyuan', describe: 'a07启源等车型' },
 ];
 
 export default function SignApk() {
@@ -108,7 +108,7 @@ export default function SignApk() {
                 </div>
               </>
             ))
-            .with({ type: 'loading' }, () => <Loading title="正在解包中..." description="请稍候，正在签名 APK，一般20秒左右！" />)
+            .with({ type: 'loading' }, () => <Loading title="正在签名中..." description="请稍候，正在签名 APK，一般20秒左右！" />)
             .with({ type: 'success' }, ({ data: signedApkPath }) => (
               <Success
                 title=" 🎉 签名成功！"
