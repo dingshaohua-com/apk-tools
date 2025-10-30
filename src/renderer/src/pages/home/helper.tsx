@@ -48,7 +48,7 @@ export const getMenuItems = (navigate) => {
       description: '为 APK 添加数字签名',
       variant: 'warning' as const,
       onClick: () => {
-        navigate('/sign-app');
+        navigate('/sign-apk');
       },
     }
   ];
