@@ -1,7 +1,7 @@
 {
   "name": "apk-tools",
   "version": "1.0.0",
-  "description": "An Electron application with React and TypeScript",
+  "description": "APK助手 - 一个用于APK文件处理的工具",
   "main": "./out/main/index.js",
   "author": "example.com",
   "homepage": "https://electron-vite.org",

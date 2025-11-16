@@ -1,5 +1,5 @@
 appId: com.electron.app
-productName: apk-tools
+productName: APK助手
 directories:
   buildResources: build
 files:
