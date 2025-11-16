@@ -1,7 +1,7 @@
-import deepalCertJks from '@root/resources/jks/deepal-cert.jks?asset';
-import qiyuanCertJks from '@root/resources/jks/qiyuan-cert.jks?asset';
-import tinnoveCertJks from '@root/resources/jks/tinnove-cert.jks?asset';
-import iFlyAutoCertJks from '@root/resources/jks/iFlyAuto-cert.jks?asset';
+import deepalCertJks from '@root/resources/jks/deepal-cert.jks?asset&asarUnpack';
+import qiyuanCertJks from '@root/resources/jks/qiyuan-cert.jks?asset&asarUnpack';
+import tinnoveCertJks from '@root/resources/jks/tinnove-cert.jks?asset&asarUnpack';
+import iFlyAutoCertJks from '@root/resources/jks/iFlyAuto-cert.jks?asset&asarUnpack';
 
 interface CertJks {
   value: string;

@@ -1,6 +1,6 @@
 import { app, shell, BrowserWindow, ipcMain } from 'electron'
 import { join } from 'path'
-import { electronApp, optimizer, is } from '@electron-toolkit/utils'
+import { electronApp, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
 
 function createWindow(): void {
@@ -45,9 +45,24 @@ app.whenReady().then(() => {
   // Default open or close DevTools by F12 in development
   // and ignore CommandOrControl + R in production.
   // see https://github.com/alex8088/electron-toolkit/tree/master/packages/utils
+  // app.on('browser-window-created', (_, window) => {
+  //   optimizer.watchWindowShortcuts(window)
+  // })
+
+  // 允许在生产环境下也能使用F12打开开发者工具
   app.on('browser-window-created', (_, window) => {
-    optimizer.watchWindowShortcuts(window)
+    window.webContents.on('before-input-event', (event, input) => {
+      if (input.key === 'F12') {
+        if (window.webContents.isDevToolsOpened()) {
+          window.webContents.closeDevTools()
+        } else {
+          window.webContents.openDevTools()
+        }
+        event.preventDefault()
+      }
+    })
   })
+
 
   // IPC test
   ipcMain.on('ping', () => console.log('pong'))

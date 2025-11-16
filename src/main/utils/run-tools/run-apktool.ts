@@ -1,6 +1,6 @@
 import path from 'path';
 import { runJava } from '@main/utils/run-tools/run-java';
-import apktoolJar from '@root/resources/apktool.jar?asset';
+import apktoolJar from '@root/resources/apktool.jar?asset&asarUnpack';
 
 export async function decodeApk(args: { filePath: string }) {
   // 使用path.parse解析路径，从而获取文件名（不含后缀）

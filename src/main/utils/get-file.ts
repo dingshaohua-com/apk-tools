@@ -1,6 +1,6 @@
 export default function getFile(key: string): string {
   const some = import.meta.glob(['../../../resources/build-tools/34.0.0/apksigner*', '../../../resources/jre/bin/java*'], {
-    query: '?asset',
+    query: '?asset&asarUnpack',
     import: 'default',
     eager: true,
   });
@@ -13,5 +13,6 @@ export default function getFile(key: string): string {
       someFilePath['java'] = some[key];
     }
   });
-  return someFilePath[key];
+
+  return someFilePath[key] || '';
 }
