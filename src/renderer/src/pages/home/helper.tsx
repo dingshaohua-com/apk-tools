@@ -3,8 +3,9 @@ import packAppImg from '@renderer/assets/imgs/pack-app.svg';
 import signAppImg from '@renderer/assets/imgs/sign-app.svg';
 // import patchAppImg from '@renderer/assets/imgs/patch-app.svg';
 import unpackAppImg from '@renderer/assets/imgs/unpack-app.svg';
+import { Info } from 'lucide-react';
 
-export const getMenuItems = (navigate) => {
+export const getMenuItems = (navigate, onAboutClick) => {
   return [
     {
       icon: <img className="w-7 h-7" src={unpackAppImg} />,
@@ -50,6 +51,13 @@ export const getMenuItems = (navigate) => {
       onClick: () => {
         navigate('/sign-apk');
       },
+    },
+    {
+      icon: <Info className="w-7 h-7" />,
+      title: '关于',
+      description: '关于本软件',
+      variant: 'slate' as const,
+      onClick: onAboutClick,
     }
   ];
 };
